@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +29,13 @@ class ViewController: UIViewController {
     @objc
     private func showSettings(_ sender: UIBarButtonItem) {
         print("show settings")
+        
+        let settingsVC = SettingsViewController()
+        
+//        present(settingsVC, animated: true)
+//        settingsVC.modalTransitionStyle = .partialCurl
+        
+        navigationController?.pushViewController(settingsVC, animated: true)
     }
 
 }
